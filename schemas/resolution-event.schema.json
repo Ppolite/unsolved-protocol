@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://unsolved.example/schemas/resolution-event.schema.json",
+  "$id": "urn:unsolved-protocol:schema:resolution-event:v0.1",
   "title": "UNSOLVED Resolution Event",
   "type": "object",
   "required": [
