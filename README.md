@@ -45,7 +45,7 @@ The public score methodology is designed to be inspectable rather than mysteriou
 
 Scores are normalized by issue type and severity and must always be published with sample-size and confidence information.
 
-See `ACCOUNTABILITY_SCORE.md` for the full methodology.
+See [ACCOUNTABILITY_SCORE.md](ACCOUNTABILITY_SCORE.md) for the methodology.
 
 ## Transparency principles
 
@@ -93,23 +93,29 @@ The public protocol is the acquisition and trust layer. Sustainable revenue can 
 
 Public methodology remains public regardless of whether an institution is a paying customer.
 
+See [COMMERCIAL_BOUNDARY.md](COMMERCIAL_BOUNDARY.md) for the intended separation between open methodology and proprietary operations.
+
 ## Repository status
 
 **Protocol version:** `0.1-draft`  
 **Pilot status:** Pre-launch  
 **License:** No open-source license has been granted at this time. Standard copyright applies to repository contents, subject to GitHub's platform terms.
 
-## Documents
+## Public protocol package
 
-This repository is being built in public. The first protocol package will include:
-
-- `PROTOCOL.md`
-- `RESOLUTION_STATES.md`
-- `ACCOUNTABILITY_SCORE.md`
-- `EVIDENCE_STANDARD.md`
-- `GOVERNANCE.md`
-- `COMMERCIAL_BOUNDARY.md`
-- machine-readable challenge and resolution schemas
+- [MANIFESTO.md](MANIFESTO.md) — why UNSOLVED exists
+- [PROTOCOL.md](PROTOCOL.md) — challenge and Resolution Contract specification
+- [RESOLUTION_STATES.md](RESOLUTION_STATES.md) — resolution and responsibility state machines
+- [ACCOUNTABILITY_SCORE.md](ACCOUNTABILITY_SCORE.md) — transparent scoring methodology
+- [EVIDENCE_STANDARD.md](EVIDENCE_STANDARD.md) — provenance, privacy, and verification rules
+- [GOVERNANCE.md](GOVERNANCE.md) — appeals, corrections, and commercial independence
+- [PILOT.md](PILOT.md) — Phase 1 design and pass/fail criteria
+- [COMMERCIAL_BOUNDARY.md](COMMERCIAL_BOUNDARY.md) — revenue stack and public/private boundary
+- [NOTICE.md](NOTICE.md) — current rights and licensing posture
+- [CONTRIBUTING.md](CONTRIBUTING.md) — how to participate during the pre-license phase
+- [CHANGELOG.md](CHANGELOG.md) — version history
+- [`schemas/`](schemas/) — machine-readable protocol schemas
+- [`examples/streetlight-challenge.json`](examples/streetlight-challenge.json) — synthetic pilot example
 
 ---
 
