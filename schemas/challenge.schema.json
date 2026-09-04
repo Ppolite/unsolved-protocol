@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unsolved.example/schemas/challenge.schema.json",
+  "title": "UNSOLVED Challenge",
+  "type": "object",
+  "required": [
+    "challenge_id",
+    "protocol_version",
+    "issue_type",
+    "severity",
+    "created_at",
+    "resolution_state",
+    "responsibility_state",
+    "resolution_contract",
+    "escalation"
+  ],
+  "properties": {
+    "challenge_id": {"type": "string", "minLength": 1},
+    "protocol_version": {"type": "string", "minLength": 1},
+    "issue_type": {"type": "string", "minLength": 1},
+    "severity": {"type": "string", "enum": ["low", "moderate", "high", "critical"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "location": {
+      "type": "object",
+      "properties": {
+        "label": {"type": "string"},
+        "latitude": {"type": "number", "minimum": -90, "maximum": 90},
+        "longitude": {"type": "number", "minimum": -180, "maximum": 180}
+      },
+      "additionalProperties": false
+    },
+    "institution": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": {"type": "string"},
+        "jurisdiction": {"type": "string"},
+        "official_case_id": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "resolution_state": {
+      "type": "string",
+      "enum": ["REPORTED", "OPEN", "CLAIMED_RESOLVED", "VERIFIED_RESOLVED", "DISPUTED", "UNVERIFIABLE"]
+    },
+    "responsibility_state": {
+      "type": "string",
+      "enum": ["UNASSIGNED", "CANDIDATE", "ACCEPTED", "DISPUTED", "TRANSFERRED"]
+    },
+    "resolution_contract": {
+      "type": "object",
+      "required": ["version", "done_when"],
+      "properties": {
+        "version": {"type": "string"},
+        "done_when": {"type": "string", "minLength": 1},
+        "accepted_evidence_classes": {"type": "array", "items": {"type": "string"}},
+        "minimum_independent_reviewers": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "escalation": {
+      "type": "object",
+      "required": ["mode", "ceiling"],
+      "properties": {
+        "mode": {"type": "string", "enum": ["pledge_target", "none"]},
+        "starting_target": {"type": "number", "minimum": 0},
+        "schedule": {"type": "string"},
+        "ceiling": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
