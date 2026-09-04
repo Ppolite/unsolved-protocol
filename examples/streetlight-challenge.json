@@ -1,0 +1,35 @@
+{
+  "challenge_id": "EXAMPLE-CHI-STREETLIGHT-0001",
+  "protocol_version": "0.1-draft",
+  "issue_type": "streetlight_outage",
+  "severity": "moderate",
+  "created_at": "2026-09-04T00:00:00Z",
+  "location": {
+    "label": "Synthetic pilot block — not a live challenge",
+    "latitude": 41.881,
+    "longitude": -87.63
+  },
+  "institution": {
+    "name": "Example Municipal Transportation Department",
+    "jurisdiction": "Example City",
+    "official_case_id": "SR-EXAMPLE-0001"
+  },
+  "resolution_state": "REPORTED",
+  "responsibility_state": "CANDIDATE",
+  "resolution_contract": {
+    "version": "1",
+    "done_when": "All fixtures identified in the opening evidence are visibly illuminated during darkness in a post-disposition location-verified observation, reviewed by at least two independent reviewers.",
+    "accepted_evidence_classes": [
+      "official_service_request",
+      "timestamped_location_verified_video",
+      "independent_field_observation"
+    ],
+    "minimum_independent_reviewers": 2
+  },
+  "escalation": {
+    "mode": "pledge_target",
+    "starting_target": 250,
+    "schedule": "published pilot escalation schedule",
+    "ceiling": 25000
+  }
+}
